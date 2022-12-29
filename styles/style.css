@@ -35,6 +35,17 @@
   font-weight: 400;
 }
 
+.text_1-2_18_400 {
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.text_34_24_400 {
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: 400;
+}
 /* Header */
 
 .header {
@@ -45,6 +56,7 @@
   position: relative;
   display: flex;
   align-items: center;
+  background-color: #f2f2f2;
 }
 
 .logo_place_header {
@@ -84,6 +96,44 @@
   position: absolute;
   bottom: 0;
   right: 0;
+}
+
+/* Description */
+
+.description {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.two-columns {
+  display: flex;
+  width: 80%;
+  min-width: 784px;
+  justify-content: space-between;
+}
+
+.two-columns__brief {
+  color: #2f80ed;
+  width: 175px;
+}
+
+.two-columns__main-text {
+  width: 75%;
+}
+
+.two-columns__paragraph {
+  margin-top: 30px;
+}
+
+.two-columns__paragraph:first-of-type {
+  margin-top: 0;
+}
+
+.two-columns__span-accent {
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: 600;
 }
 
 /* и элемента с модификатором вида ключ-значение */
