@@ -37,6 +37,10 @@
   margin: 20px auto 0;
 }
 
+.theme_dark {
+  color: #fff;
+}
+
 /* Table */
 
 .table {
@@ -241,10 +245,35 @@
   z-index: 0;
 }
 
-/* и элемента с модификатором вида ключ-значение */
+/* Kaufman */
+
+.kaufman {
+  background-color: #1f1f1f;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.kaufman__title_theme_dark {
+  margin-top: 0;
+}
+
 .table__cell_theme_dark {
   width: 200px;
   color: white;
   margin-right: 0;
   margin-top: 80px;
+  z-index: 1;
+}
+
+.kaufman__triangle {
+  position: absolute;
+  top: 0;
+  right: -300px;
+  z-index: 0;
+  width: 877px;
+  height: 877px;
 }
