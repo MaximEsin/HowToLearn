@@ -20,6 +20,7 @@
 
 .link {
   color: #2f80ed;
+  text-decoration: none;
 }
 
 .title {
@@ -194,6 +195,50 @@
 .digits__cell {
   width: 250px;
   margin-top: 60px;
+}
+
+/* Feynman */
+
+.feynman {
+  height: 100vh;
+  margin-top: 100px;
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.feynman__title {
+  line-height: 1.15;
+  font-size: 120px;
+  font-weight: 600;
+  width: 648px;
+  text-align: center;
+  margin: 100px auto 70px;
+  z-index: 1;
+}
+/* Subtitle & Link одинаковый стиль текста, решил соединить их в один ниже */
+/* Если так не правильно, поправьте пожалуйста :) */
+
+.feynman__text {
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: 400;
+  z-index: 1;
+}
+
+.feynman__link {
+  position: absolute;
+  top: 50%;
+  right: 0;
+}
+
+.feynman__image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
 }
 
 /* и элемента с модификатором вида ключ-значение */
