@@ -27,7 +27,7 @@
   line-height: 1.15;
   font-size: 60px;
   font-weight: 600;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 .subtitle {
@@ -37,7 +37,11 @@
   margin: 20px auto 0;
 }
 
-.theme_dark {
+.title_theme_dark {
+  color: #fff;
+}
+
+.subtitle_theme_dark {
   color: #fff;
 }
 
@@ -48,12 +52,12 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  list-style: none;
 }
 
 .table__cell {
   display: flex;
   flex-direction: column;
-  gap: 20px;
 }
 
 .table__heading {
@@ -64,7 +68,7 @@
 }
 
 .table__text {
-  margin: 0 auto 0 0;
+  margin: 20px auto 0 0;
   line-height: 1.2;
   font-size: 18px;
   font-weight: 400;
@@ -110,18 +114,35 @@
 }
 
 .header__title {
-  margin-left: 64px;
   width: 730px;
   line-height: 96px;
   font-size: 102px;
   font-weight: 600;
+  z-index: 1;
+  margin: 0 0 0 64px;
 }
 
 .header__subtitle {
-  width: 400px;
+  width: 388px;
   position: absolute;
   left: 64px;
   bottom: 30px;
+  line-height: 25px;
+  font-size: 18px;
+  font-weight: 400;
+  z-index: 1;
+  margin: 0;
+}
+
+.header__link {
+  position: relative;
+}
+
+.header__arrow {
+  width: 20px;
+  position: absolute;
+  top: 4px;
+  left: 60px;
 }
 
 .header__square-pic {
@@ -131,6 +152,7 @@
   position: absolute;
   top: 64px;
   right: 0;
+  z-index: 0;
 }
 
 .header__main-illustration {
@@ -139,6 +161,7 @@
   position: absolute;
   bottom: 0;
   right: 0;
+  z-index: 0;
 }
 
 /* Content (не совсем понимаю смысл этого блока кроме семантики) */
@@ -160,21 +183,28 @@
 .two-columns {
   display: flex;
   width: 80%;
-  min-width: 784px;
   justify-content: space-between;
 }
 
 .two-columns__brief {
   color: #2f80ed;
   width: 175px;
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0;
 }
 
 .two-columns__main-text {
-  width: 75%;
+  width: 80%;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: 400;
+  min-width: 784px;
 }
 
 .two-columns__paragraph {
-  margin-top: 30px;
+  margin: 30px 0 0 0;
 }
 
 .two-columns__paragraph:first-of-type {
@@ -196,7 +226,21 @@
   align-items: center;
 }
 
-.digits__cell {
+.digits-title {
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.digits-subtitle {
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: 400;
+  margin: 20px auto 0;
+}
+
+.digits__table_cell {
   width: 250px;
   margin-top: 60px;
 }
@@ -204,7 +248,7 @@
 /* Feynman */
 
 .feynman {
-  height: 100vh;
+  height: 890px;
   margin-top: 100px;
   background-color: #f2f2f2;
   display: flex;
@@ -225,7 +269,7 @@
 /* Subtitle & Link одинаковый стиль текста, решил соединить их в один ниже */
 /* Если так не правильно, поправьте пожалуйста :) */
 
-.feynman__text {
+.feynman__subtitle {
   line-height: 51px;
   font-size: 36px;
   font-weight: 400;
@@ -235,7 +279,17 @@
 .feynman__link {
   position: absolute;
   top: 50%;
-  right: 0;
+  right: 48px;
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: 400;
+}
+
+.feynman__arrow {
+  position: absolute;
+  right: -35px;
+  top: 20px;
+  width: 25px;
 }
 
 .feynman__image {
@@ -258,8 +312,17 @@
   overflow: hidden;
 }
 
-.kaufman__title_theme_dark {
+.kaufman__title {
   margin-top: 0;
+  z-index: 1;
+}
+
+.kaufman__subtitle {
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: 400;
+  margin: 20px auto 0;
+  z-index: 1;
 }
 
 .table__cell_theme_dark {
@@ -271,9 +334,10 @@
 }
 
 .kaufman__triangle {
+  background-image: url(../images/kaufman-triangle.svg);
   position: absolute;
   top: 0;
-  right: -300px;
+  right: -210px;
   z-index: 0;
   width: 877px;
   height: 877px;
@@ -284,6 +348,7 @@
 .footer {
   background-color: #1f1f1f;
   padding-top: 60px;
+  box-sizing: border-box;
   padding-bottom: 40px;
   display: flex;
   justify-content: center;
@@ -295,8 +360,11 @@
   display: flex;
 }
 
-.footer__column_copyright {
-  width: 50%;
+.footer__author {
+  color: #fff;
+}
+
+.column_copyright {
   display: flex;
   flex-direction: column;
   flex-basis: 711px;
@@ -305,13 +373,13 @@
 
 /* Не вижу смысла в footer__author */
 
-.footer__info {
+.footer__column_content_info {
   display: flex;
   flex-direction: column;
   margin-left: auto;
 }
 
-.footer__social {
+.footer__column_content_social {
   display: flex;
   flex-direction: column;
   margin-left: auto;
@@ -322,12 +390,17 @@
   font-size: 18px;
   font-weight: 600;
   color: #fff;
+  margin: 0 0 20px 0;
 }
 
-.footer__column-links {
+.footer__column-link {
   color: #fff;
   line-height: 30px;
   font-size: 18px;
   font-weight: 400;
   text-decoration: none;
+}
+
+.footer__social-icon {
+  margin-right: 10px;
 }
