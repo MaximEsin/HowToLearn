@@ -1,3 +1,3 @@
 # HowToLearn
 
-Static layout
+Static layout made on plain HTML & CSS with simple animation.
