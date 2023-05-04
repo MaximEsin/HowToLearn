@@ -1,7 +1,16 @@
 # HowToLearn
 
-Static layout made on plain HTML & CSS. Used technologies: CSS animation, flexbox layout, positioning, BEM "nested" CSS structure, iframe.
+#Description
+- Static layout made on plain HTML & CSS.
 
-Adding new sections with different animation is planned.
-Section studies with translate animation
-Section principals with skew animation
+#Functionality
+- Background figures are animaited
+
+#Stack
+- HTML, CSS.
+
+#Needed dependencies
+- None
+
+#Plans for future
+- No plans.
